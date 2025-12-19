@@ -52,9 +52,11 @@ Para garantir a melhor experiência ao utilizador e aos recrutadores:
 - ✅ **Código Modular**: Componentização inteligente para reuso de lógica.
 
 ---
+## 🚀Arquitetura e Decisões de Engenharia
 
-## 🚀 Como Executar Localmente
+Em vez de uma estrutura simples, este projeto segue padrões de mercado para garantir manutenibilidade:
 
-1. **Clonar o Repositório:**
-   ```bash
-   git clone [https://github.com/Ithalolp/Portfolio.git](https://github.com/Ithalolp/Portfolio.git)
+* **Componentização Atômica:** Separação lógica entre componentes de interface (UI) e componentes de lógica de negócio.
+* **Gerenciamento de Estado:** Uso eficiente de React Hooks (`useState`, `useEffect`) para controle de fluxo sem sobrecarga de renderização.
+* **Typing System:** Interfaces e Types rigorosos para evitar erros em tempo de execução e facilitar o autocomplete no desenvolvimento.
+* **Asset Management:** Otimização de imagens e vetores (SVG) para reduzir o LCP (Largest Contentful Paint) e melhorar o Core Web Vitals.
