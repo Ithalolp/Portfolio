@@ -1,10 +1,5 @@
 # 🚀 Portfólio Professional: Front-End Engineering
 
-![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-NETLIFY-ID/deploy-status)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-
 > **Acesse o projeto ao vivo:** [ithalo-portfolio.netlify.app](https://ithalo-portfolio.netlify.app/#code)
 
 Este é o meu portfólio profissional, desenvolvido para demonstrar habilidades avançadas em desenvolvimento front-end, com foco total em **código limpo**, **performance extrema** e **boas práticas de UI/UX**.
