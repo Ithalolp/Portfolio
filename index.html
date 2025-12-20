@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antonio Ithalo | Digital Architect & 3D Artist</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Outfit:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+  </head>
+  <body>
+    <div id="progress-bar"></div>
+
+    <nav
+      class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-3xl px-6 py-4 rounded-3xl bg-glass flex items-center justify-between border border-white/10 shadow-2xl"
+    >
+      <div
+        class="text-sm font-black tracking-tighter uppercase italic font-outfit"
+      >
+        <span class="text-purple-500">ITHALO</span>
+      </div>
+      <div class="flex items-center gap-3 sm:gap-6">
+        <a
+          href="#home"
+          class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:text-purple-400 transition-colors"
+          >Início</a
+        >
+        <a
+          href="#about"
+          class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:text-purple-400 transition-colors"
+          >Bio</a
+        >
+        <a
+          href="#visual"
+          class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:text-purple-400 transition-colors"
+          >Visual</a
+        >
+        <a
+          href="#code"
+          class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:text-purple-400 transition-colors"
+          >Projetos</a
+        >
+        <a
+          href="#contact"
+          class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:text-purple-400 transition-colors"
+          >Contato</a
+        >
+      </div>
+    </nav>
+
+    <header
+      id="home"
+      class="relative min-h-screen flex flex-col items-center justify-center text-center px-6"
+    >
+      <canvas id="hero-canvas"></canvas>
+
+      <div
+        class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/5 border border-green-500/10 mb-8"
+      >
+        <div
+          class="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_12px_#22c55e]"
+        ></div>
+        <span
+          class="text-[10px] font-black uppercase tracking-[0.25em] text-green-500"
+          >CORE: MULTIMODAL DEVELOPER [ONLINE]</span
+        >
+      </div>
+
+      <h1
+        class="reveal font-outfit text-5xl md:text-8xl font-black mb-6 leading-none tracking-tighter uppercase"
+      >
+        Desenvolvedor <span class="text-gradient italic">Full-Stack</span>
+        <br />
+        & Visual <span class="text-gradient italic">3D Artist</span>
+      </h1>
+
+      <p
+        class="reveal max-w-2xl text-zinc-400 text-lg md:text-xl mb-12 font-light"
+      >
+        Olá, sou o Antonio Ithalo. <br />
+        <span id="typing-text" class="text-purple-400 font-bold"></span
+        ><span class="cursor-blink"></span>
+      </p>
+
+      <div class="reveal flex flex-col sm:flex-row gap-4">
+        <a
+          href="#code"
+          class="px-10 py-4 bg-purple-600 hover:bg-purple-500 text-white font-black rounded-xl transition-all uppercase text-[10px] tracking-widest shadow-[0_0_30px_rgba(168,85,247,0.3)] flex items-center gap-2"
+          >Explorar Código <i data-lucide="code"></i
+        ></a>
+        <a
+          href="#visual"
+          class="px-10 py-4 bg-zinc-900/50 hover:bg-zinc-800 text-white font-black rounded-xl border border-white/5 transition-all uppercase text-[10px] tracking-widest flex items-center gap-2"
+          >Explorar 3D <i data-lucide="box"></i
+        ></a>
+      </div>
+    </header>
+
+    <section id="about" class="py-24 px-6 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div class="reveal">
+          <h2
+            class="font-outfit text-4xl font-black uppercase mb-6 tracking-tighter italic text-gradient"
+          >
+            Tech Stack & Status
+          </h2>
+          <p class="text-zinc-400 mb-8 leading-relaxed max-w-xl">
+            Especialista em construir sistemas digitais de alta performance,
+            unindo o desenvolvimento de aplicativos escaláveis à vanguarda da
+            computação gráfica 3D e inteligência artificial generativa.
+          </p>
+
+          <div class="flex flex-wrap gap-3 mb-12">
+            <span
+              class="px-4 py-2 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/10 italic text-purple-400"
+              >Next.js</span
+            >
+            <span
+              class="px-4 py-2 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/10 italic text-blue-400"
+              >Python</span
+            >
+            <span
+              class="px-4 py-2 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/10 italic text-green-400"
+              >Web</span
+            >
+            <span
+              class="px-4 py-2 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/10 italic text-zinc-300"
+              >Node.js</span
+            >
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="reveal bento-item p-8 rounded-[2rem] border-purple-500/20 group relative overflow-hidden"
+            >
+              <div
+                class="absolute -right-4 -top-4 w-24 h-24 bg-purple-500/10 blur-3xl group-hover:bg-purple-500/20 transition-all"
+              ></div>
+              <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="p-2 bg-purple-500/10 rounded-lg">
+                    <i
+                      data-lucide="terminal"
+                      class="w-5 h-5 text-purple-500"
+                    ></i>
+                  </div>
+                  <h4
+                    class="text-purple-500 font-black text-2xl uppercase italic leading-none"
+                  >
+                    Desenvolvedor
+                  </h4>
+                </div>
+                <p
+                  class="text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-bold mb-6"
+                >
+                  Junior Full-Stack
+                </p>
+                <div class="space-y-4">
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-[8px] border border-purple-500/30 px-2 py-1 rounded-md text-purple-300 bg-purple-500/5"
+                      >NEXT.JS</span
+                    >
+                    <span
+                      class="text-[8px] border border-purple-500/30 px-2 py-1 rounded-md text-purple-300 bg-purple-500/5"
+                      >Web</span
+                    >
+                  </div>
+                  <p
+                    class="text-[11px] text-zinc-400 leading-relaxed uppercase tracking-tighter"
+                  >
+                    Sistemas escaláveis com arquitetura limpa e performance
+                    otimizada.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="reveal bento-item p-8 rounded-[2rem] border-orange-500/20 group relative overflow-hidden"
+            >
+              <div
+                class="absolute -right-4 -top-4 w-24 h-24 bg-orange-500/10 blur-3xl group-hover:bg-orange-500/20 transition-all"
+              ></div>
+              <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="p-2 bg-orange-500/10 rounded-lg">
+                    <i data-lucide="box" class="w-5 h-5 text-orange-500"></i>
+                  </div>
+                  <h4
+                    class="text-orange-500 font-black text-2xl uppercase italic leading-none"
+                  >
+                    3D Artist
+                  </h4>
+                </div>
+                <p
+                  class="text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-bold mb-6"
+                >
+                  Imersão Digital
+                </p>
+                <div class="space-y-4">
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-[8px] border border-orange-500/30 px-2 py-1 rounded-md text-orange-300 bg-orange-500/5"
+                      >BLENDER</span
+                    >
+                    <span
+                      class="text-[8px] border border-orange-500/30 px-2 py-1 rounded-md text-orange-300 bg-orange-500/5"
+                      >THREE.JS</span
+                    >
+                  </div>
+                  <p
+                    class="text-[11px] text-zinc-400 leading-relaxed uppercase tracking-tighter"
+                  >
+                    Modelagem e integração de assets tridimensionais para web
+                    interativa.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="reveal bento-item p-8 rounded-[2rem] border-cyan-500/20 group relative overflow-hidden"
+            >
+              <div
+                class="absolute -right-4 -top-4 w-24 h-24 bg-cyan-500/10 blur-3xl group-hover:bg-cyan-500/20 transition-all"
+              ></div>
+              <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="p-2 bg-cyan-500/10 rounded-lg">
+                    <i
+                      data-lucide="brain-circuit"
+                      class="w-5 h-5 text-cyan-400"
+                    ></i>
+                  </div>
+                  <h4
+                    class="text-cyan-400 font-black text-2xl uppercase italic leading-none"
+                  >
+                    AI Pipelines
+                  </h4>
+                </div>
+                <p
+                  class="text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-bold mb-6"
+                >
+                  Automação Inteligente
+                </p>
+                <div class="space-y-4">
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-[8px] border border-cyan-500/30 px-2 py-1 rounded-md text-cyan-300 bg-cyan-500/5"
+                      >PYTHON</span
+                    >
+                    <span
+                      class="text-[8px] border border-cyan-500/30 px-2 py-1 rounded-md text-cyan-300 bg-cyan-500/5"
+                      >PROMPT ENG</span
+                    >
+                  </div>
+                  <p
+                    class="text-[11px] text-zinc-400 leading-relaxed uppercase tracking-tighter"
+                  >
+                    Implementação de fluxos generativos e integração de LLMs em
+                    produtos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="reveal bento-item p-8 rounded-[2rem] border-pink-500/20 group relative overflow-hidden"
+            >
+              <div
+                class="absolute -right-4 -top-4 w-24 h-24 bg-pink-500/10 blur-3xl group-hover:bg-pink-500/20 transition-all"
+              ></div>
+              <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="p-2 bg-pink-500/10 rounded-lg">
+                    <i
+                      data-lucide="layout-template"
+                      class="w-5 h-5 text-pink-500"
+                    ></i>
+                  </div>
+                  <h4
+                    class="text-pink-500 font-black text-2xl uppercase italic leading-none"
+                  >
+                    UI/UX Design
+                  </h4>
+                </div>
+                <p
+                  class="text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-bold mb-6"
+                >
+                  Interface Visual
+                </p>
+                <div class="space-y-4">
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-[8px] border border-pink-500/30 px-2 py-1 rounded-md text-pink-300 bg-pink-500/5"
+                      >FIGMA</span
+                    >
+                    <span
+                      class="text-[8px] border border-pink-500/30 px-2 py-1 rounded-md text-pink-300 bg-pink-500/5"
+                      >PROTOTYPING</span
+                    >
+                  </div>
+                  <p
+                    class="text-[11px] text-zinc-400 leading-relaxed uppercase tracking-tighter"
+                  >
+                    Design centrado no usuário com foco em estética minimalista
+                    e funcional.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div
+            class="reveal bento-item p-8 rounded-[2rem] flex flex-col items-center text-center group"
+          >
+            <div
+              class="w-12 h-12 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="cpu" class="text-purple-500 w-6 h-6"></i>
+            </div>
+            <h4 class="text-purple-400 font-black text-3xl mb-5">
+              Interfaces Digitais
+            </h4>
+            <p
+              class="text-[9px] text-purple-400 px-2 uppercase tracking-[0.2em] font-black opacity-70"
+            >
+              Soluções de ponta a ponta em desenvolvimento web, design 3D e IA
+              generativa.
+            </p>
+          </div>
+
+          <div
+            class="reveal bento-item p-8 rounded-[2rem] flex flex-col items-center text-center group"
+          >
+            <div
+              class="w-12 h-12 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+            >
+              <i
+                data-lucide="layout-template"
+                class="text-purple-500 w-6 h-6"
+              ></i>
+            </div>
+            <h4 class="text-purple-400 font-black text-3xl mb-1">
+              Visuais Imersivos
+            </h4>
+            <p
+              class="text-[9px] text-purple-400 px-2 uppercase tracking-[0.2em] font-black opacity-70"
+            >
+              Desenvolvimento de SPAs e sites institucionais com animações
+              fluidas e foco em conversão.
+            </p>
+          </div>
+
+          <div
+            class="reveal bento-item p-8 rounded-[2rem] flex flex-col items-center text-center group"
+          >
+            <div
+              class="w-12 h-12 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="box" class="text-purple-500 w-6 h-6"></i>
+            </div>
+            <h4 class="text-purple-400 font-black text-3xl mb-1">
+              Experiências 3D
+            </h4>
+            <p
+              class="text-[9px] text-purple-400 px-2 uppercase tracking-[0.2em] font-black opacity-70"
+            >
+              Integração de modelos 3D interactivos via Three.js trazendo
+              profundidade ao ambiente web.
+            </p>
+          </div>
+
+          <div
+            class="reveal bento-item p-8 rounded-[2rem] flex flex-col items-center text-center group"
+          >
+            <div
+              class="w-12 h-12 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+            >
+              <i
+                data-lucide="brain-circuit"
+                class="text-purple-500 w-6 h-6"
+              ></i>
+            </div>
+            <h4 class="text-purple-400 font-black text-3xl mb-1">
+              AI Pipelines
+            </h4>
+            <p
+              class="text-[9px] text-purple-400 px-2 uppercase tracking-[0.2em] font-black opacity-70"
+            >
+              Criação de fluxos que utilizam inteligência artificial para
+              automação e geração de conteúdo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visual" class="py-24 px-6 max-w-7xl mx-auto">
+      <h2
+        class="reveal font-outfit text-4xl font-black uppercase mb-12 tracking-tighter italic"
+      >
+        Galeria <span class="text-purple-500">3D Artist</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="reveal bento-item p-4 rounded-[2rem]">
+          <div
+            class="img-zoom mb-4 h-64 bg-zinc-900 flex items-center justify-center"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80"
+              alt="Blender"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="font-bold px-2 italic text-zinc-200">Sincronia Digital</h3>
+          <p
+            class="text-[9px] text-purple-400 px-2 uppercase tracking-[0.2em] font-black opacity-80"
+          >
+            MATRIZ
+          </p>
+        </div>
+        <div class="reveal bento-item p-4 rounded-[2rem]">
+          <div
+            class="img-zoom mb-4 h-64 bg-zinc-900 flex items-center justify-center"
+          >
+            <img
+              src="/assets/img/tenis3d.png"
+              alt="Houdini"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="font-bold px-2 italic text-zinc-200">
+            Protótipo: Bio-Síntese
+          </h3>
+          <p
+            class="text-[9px] text-purple-400 px-2 uppercase tracking-[0.2em] font-black opacity-80"
+          >
+            Neon Step
+          </p>
+        </div>
+        <div class="reveal bento-item p-4 rounded-[2rem]">
+          <div
+            class="img-zoom mb-4 h-64 bg-zinc-900 flex items-center justify-center"
+          >
+            <img
+              src="/assets/img/carro3d.png"
+              alt="UE5"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="font-bold px-2 italic text-zinc-200">
+            Hyper-Drive na Cidade
+          </h3>
+          <p
+            class="text-[9px] text-purple-400 px-2 uppercase tracking-[0.2em] font-black opacity-80"
+          >
+            ZENITH
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="code" class="py-24 px-6 max-w-7xl mx-auto">
+      <div class="flex flex-col justify-start items-start mb-12 gap-2">
+        <h2
+          class="reveal font-outfit text-4xl font-black uppercase tracking-tighter italic mb-2 text-left"
+        >
+          Projetos <span class="text-purple-500"> Recentes</span>
+        </h2>
+        <p
+          class="reveal text-zinc-500 text-sm uppercase tracking-widest text-left"
+        >
+          Clique no card para abrir no GitHub
+        </p>
+      </div>
+
+      <div
+        id="github-repos"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-start"
+      ></div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto text-center">
+      <div
+        class="reveal bg-glass p-8 md:p-12 rounded-[3rem] border border-purple-500/20 shadow-[0_0_50px_rgba(168,85,247,0.1)]"
+      >
+        <h2
+          class="font-outfit text-4xl md:text-7xl font-black uppercase mb-6 italic"
+        >
+          Entre em <span class="text-gradient">Contato</span>
+        </h2>
+        <p class="text-zinc-400 mb-10 text-lg">
+          Iniciando novos ciclos de desenvolvimento e design. Vamos conversar?
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+          <a
+            href="mailto:antonioithalo6@gmail.com"
+            class="p-5 bg-white/5 rounded-2xl hover:bg-purple-500/20 transition-all border border-white/5 group"
+          >
+            <i
+              data-lucide="mail"
+              class="w-6 h-6 group-hover:text-purple-400"
+            ></i>
+          </a>
+          <a
+            href="https://www.instagram.com/a.ithalo_/"
+            target="_blank"
+            class="p-5 bg-white/5 rounded-2xl hover:bg-purple-500/20 transition-all border border-white/5 group"
+          >
+            <i
+              data-lucide="instagram"
+              class="w-6 h-6 group-hover:text-orange-400"
+            ></i>
+          </a>
+          <a
+            href="https://github.com/Ithalolp"
+            target="_blank"
+            class="p-5 bg-white/5 rounded-2xl hover:bg-purple-500/20 transition-all border border-white/5 group"
+          >
+            <i
+              data-lucide="github"
+              class="w-6 h-6 group-hover:text-purple-400"
+            ></i>
+          </a>
+          <a
+            href="https://wa.me/558894202290"
+            target="_blank"
+            title="WhatsApp"
+            class="p-5 bg-white/5 rounded-2xl hover:bg-green-500/20 transition-all border border-white/5 group hover:border-green-500/50"
+          >
+            <i
+              data-lucide="message-circle"
+              class="w-6 h-6 group-hover:scale-110 transition-transform group-hover:text-green-400"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="py-12 text-center text-[10px] uppercase tracking-[0.4em] font-medium border-t border-white/5"
+    >
+      <span class="text-zinc-500">©</span>
+      <span class="text-gradient font-black">Antonio Ithalo</span>
+    </footer>
+    <script src="/assets/java/script.js"></script>
+  </body>
+</html>
