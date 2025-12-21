@@ -215,3 +215,32 @@ window.onload = () => {
   fetchRepos();
   refreshObserver();
 };
+function switchTab(tabId) {
+  // Esconder todos os conteúdos
+  document.querySelectorAll(".tab-content").forEach((tab) => {
+    tab.classList.add("hidden");
+  });
+
+  // Remover classe ativa de todos os botões
+  document.querySelectorAll(".tab-btn").forEach((btn) => {
+    btn.classList.remove("active-tab");
+    btn.classList.add("border-white/10");
+  });
+
+  // Mostrar aba selecionada
+  document.getElementById(tabId).classList.remove("hidden");
+
+  // Adicionar classe ativa ao botão clicado
+  const activeBtnMap = {
+    "tab-projects": "btn-projects",
+    "tab-certs": "btn-certs",
+    "tab-tech": "btn-tech",
+  };
+
+  const btn = document.getElementById(activeBtnMap[tabId]);
+  btn.classList.add("active-tab");
+  btn.classList.remove("border-white/10");
+
+  // Refresh nos ícones do Lucide caso novos elementos surjam
+  lucide.createIcons();
+}
