@@ -241,3 +241,40 @@ body {
 .img-zoom:hover img {
   transform: scale(1.1);
 }
+.active-tab {
+  background: rgba(168, 85, 247, 0.15) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+}
+
+.tab-content {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.pill {
+  @apply px-4 py-2 bg-purple-500/5 border border-purple-500/20 rounded-full text-[10px] font-bold text-purple-300 uppercase tracking-widest hover:bg-purple-500/20 transition-colors;
+}
+.pill-orange {
+  @apply px-4 py-2 bg-orange-500/5 border border-orange-500/20 rounded-full text-[10px] font-bold text-orange-300 uppercase tracking-widest hover:bg-orange-500/20 transition-colors;
+}
+.pill-cyan {
+  @apply px-4 py-2 bg-cyan-500/5 border border-cyan-500/20 rounded-full text-[10px] font-bold text-cyan-300 uppercase tracking-widest hover:bg-cyan-500/20 transition-colors;
+}
+
+.active-tab {
+  background: rgba(168, 85, 247, 0.1) !important;
+  color: white !important;
+  border-color: rgba(168, 85, 247, 0.5) !important;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.1);
+}
